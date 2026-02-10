@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+    .label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .value {
+      margin-bottom: 10px;
+    }
+    .error {
+      color: red;
+    }
+    .comparison {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ccc;
+    }
+    .cheaper {
+      color: green;
+      font-weight: bold;
+    }
+    .api-key-section {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    .auto-match {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+    .loading {
+      color: #666;
+      font-style: italic;
+    }
+    .confidence {
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="api-key-section">
+    <div class="label">Claude API Key:</div>
+    <input type="password" id="apiKey" placeholder="sk-ant-...">
+  </div>
+
+  <div class="label">Store:</div>
+  <div class="value" id="store">Loading...</div>
+
+  <div class="label">Product Title:</div>
+  <div class="value" id="title">Loading...</div>
+
+  <div class="label">Price:</div>
+  <div class="value" id="price">Loading...</div>
+
+  <div id="autoMatch" class="auto-match" style="display: none;">
+    <div class="label">Auto-matched Coles Product:</div>
+    <div class="value" id="autoMatchResult">Searching...</div>
+  </div>
+
+  <div id="comparison" class="comparison" style="display: none;">
+    <div class="label">Price Comparison:</div>
+    <div class="value" id="comparisonText"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

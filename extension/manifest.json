@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Woolworths & Coles Price Comparison",
+  "version": "1.1",
+  "description": "Compare product prices from Woolworths and Coles",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.coles.com.au/*",
+    "https://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.woolworths.com.au/shop/productdetails/*",
+        "*://www.coles.com.au/product/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
