@@ -1,9 +1,8 @@
-# V2 – AI-Based Product Matching
+# V1 – Added Coles Price Extraction
 
-**Goal:** Use AI (Claude via Cursor) to match the same product across Woolworths and Coles.
+**Goal:** Extract prices from Coles in addition to Woolworths.
 
-**Learned:**
-- Prompt engineering for Claude to select the closest match
-- Feeding candidate products to Claude
-- Returning match confidence scores
-- Incrementally building features
+**New learnings:**
+- DOM parsing for a different website structure
+- Handling multiple product page formats
+- Starting to think about cross-site comparison
