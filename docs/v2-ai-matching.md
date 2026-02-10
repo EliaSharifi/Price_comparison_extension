@@ -1,12 +1,10 @@
-# V3 – Progressive Feature Iteration
+# V2 – AI-Based Product Matching
 
-**Goal:** Make the extension smarter step-by-step.
+**Goal:** Use AI (Claude via Cursor) to match the same product across Woolworths and Coles.
 
-**How I progressed:**
-1. Started with raw price extraction from one site.
-2. Added a second site (Coles) and cross-comparison.
-3. Introduced Claude for fuzzy matching of product names.
-4. Iteratively refined prompts and logic based on real-world testing.
-5. Used Cursor to safely refactor multiple files while AI helped reason over the code.
+**Learned:**
+- Prompt engineering for Claude to select the closest match
+- Feeding candidate products to Claude
+- Returning match confidence scores
+- Incrementally building features
 
-**Key takeaway:** Small, iterative steps made the AI feature reliable and understandable.
